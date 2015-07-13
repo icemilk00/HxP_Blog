@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Git常用命令使用说明 | H×P的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="为了复习并记录下常用的Git命令
+从来没有接触过git的同学可以参考这个:1.我学Git就是参考的这个2.官方文档
+
+初始化一个Git仓库：
+git init
+添加文件到仓库：
+git add &amp;lt;file&amp;gt;
+
+git commit
+查看工作区的Git状态：
+git status
+查看修改：
+git diff
+查看提交历史：
+git log
+查看命令历史：
+git reflog
+回滚到某">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git常用命令使用说明">
+<meta property="og:url" content="http://yoursite.com/2015/07/13/Git常用命令使用说明/index.html">
+<meta property="og:site_name" content="H×P的博客">
+<meta property="og:description" content="为了复习并记录下常用的Git命令
+从来没有接触过git的同学可以参考这个:1.我学Git就是参考的这个2.官方文档
+
+初始化一个Git仓库：
+git init
+添加文件到仓库：
+git add &amp;lt;file&amp;gt;
+
+git commit
+查看工作区的Git状态：
+git status
+查看修改：
+git diff
+查看提交历史：
+git log
+查看命令历史：
+git reflog
+回滚到某">
+<meta property="og:updated_time" content="2015-07-13T13:09:29.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Git常用命令使用说明">
+<meta name="twitter:description" content="为了复习并记录下常用的Git命令
+从来没有接触过git的同学可以参考这个:1.我学Git就是参考的这个2.官方文档
+
+初始化一个Git仓库：
+git init
+添加文件到仓库：
+git add &amp;lt;file&amp;gt;
+
+git commit
+查看工作区的Git状态：
+git status
+查看修改：
+git diff
+查看提交历史：
+git log
+查看命令历史：
+git reflog
+回滚到某">
+  
+    <link rel="alternative" href="/atom.xml" title="H×P的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  
+<script type="text/javascript">
+	<script>
+		var _hmt = _hmt || [];
+		(function() {
+		  var hm = document.createElement("script");
+		  hm.src = "//hm.baidu.com/hm.js?183a4ec8a3667766b7a9d552f278847a";
+		  var s = document.getElementsByTagName("script")[0]; 
+		  s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
+
+</script>
+
+
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/img/headImage.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">H×P</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">我就是我，是颜色不一样的逗比</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/icemilk00" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/u/1916100921/home?wvr=5" title="weibo">weibo</a>
+					        
+								<a class="rss" target="_blank" href="/#" title="rss">rss</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/MarkDown/" style="font-size: 10px;">MarkDown</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/博客搭建/" style="font-size: 10px;">博客搭建</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+				
+				<section class="switch-part switch-part3">
+				
+					<div id="js-aboutme">iOS开发工程师。</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">H×P</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="/img/headImage.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">H×P</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">我就是我，是颜色不一样的逗比</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/icemilk00" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/u/1916100921/home?wvr=5" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="/#" title="rss">rss</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-Git常用命令使用说明" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/07/13/Git常用命令使用说明/" class="article-date">
+  	<time datetime="2015-07-13T13:06:04.000Z" itemprop="datePublished">2015-07-13</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Git常用命令使用说明
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>为了复习并记录下常用的Git命令</p>
+<p>从来没有接触过git的同学可以参考这个:<br>1.<a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="external">我学Git就是参考的这个</a><br>2.<a href="http://git-scm.com/book/zh/v1" target="_blank" rel="external">官方文档</a></p>
+<hr>
+<p>初始化一个Git仓库：</p>
+<pre><code><span class="title">git</span> init
+</code></pre><p>添加文件到仓库：</p>
+<pre><code>git <span class="built_in">add</span> &lt;<span class="built_in">file</span>&gt;
+
+git commit
+</code></pre><p>查看工作区的Git状态：</p>
+<pre><code>git <span class="keyword">status</span>
+</code></pre><p>查看修改：</p>
+<pre><code><span class="title">git</span> diff
+</code></pre><p>查看提交历史：</p>
+<pre><code>git <span class="command">log</span>
+</code></pre><p>查看命令历史：</p>
+<pre><code><span class="title">git</span> reflog
+</code></pre><p>回滚到某个版本：</p>
+<pre><code>git <span class="operator"><span class="keyword">reset</span> <span class="comment">--hard commit_id</span></span>
+</code></pre><blockquote>
+<p>commit_id 可以通过查看提交历史，来获取想要回滚的版本id</p>
+</blockquote>
+<p>丢弃工作区的修改：</p>
+<pre><code>git checkout <span class="comment">-- file</span>
+</code></pre><blockquote>
+<p>会同步到最近一次 git add 的内容</p>
+</blockquote>
+<p>丢弃暂存区内容：</p>
+<pre><code>git reset HEAD <span class="type">file</span>
+</code></pre><blockquote>
+<p>会把最近一次 git add 的内容干掉，然后再执行上面的 git checkout — file，可以把工作区和暂存区同步</p>
+</blockquote>
+<p>丢弃版本库的内容：</p>
+<blockquote>
+<p>请参考上面的 回滚到某个版本 的内容。</p>
+</blockquote>
+<p>删除版本库某个文件：</p>
+<pre><code><span class="title">git</span> rm
+</code></pre><p>关联一个远程库：</p>
+<pre><code>git remote add origin git@server-<span class="property">name</span>:path/repo-<span class="property">name</span>.git
+</code></pre><p>第一次推送master分支所有内容：</p>
+<pre><code><span class="label">git</span> <span class="keyword">push </span>-u origin master
+</code></pre><p>之后的修改推送：</p>
+<pre><code><span class="label">git</span> <span class="keyword">push </span>origin master 
+</code></pre><p>从远程库克隆一个本地库：</p>
+<pre><code>git clone git@server-<span class="property">name</span>:path/repo-<span class="property">name</span>.git
+</code></pre><p>查看分支：</p>
+<pre><code><span class="title">git</span> branch
+</code></pre><p>创建分支：</p>
+<pre><code>git branch &lt;<span class="property">name</span>&gt;
+</code></pre><p>切换分支：</p>
+<pre><code>git checkout &lt;<span class="property">name</span>&gt;
+</code></pre><p>创建 + 切换分支：</p>
+<pre><code>git checkout -吧 &lt;<span class="property">name</span>&gt;
+</code></pre><p>合并某分支到当前分支：</p>
+<pre><code>git <span class="built_in">merge</span> &lt;<span class="keyword">name</span>&gt;
+</code></pre><p>删除分支：</p>
+<pre><code>git branch -d &lt;<span class="property">name</span>&gt;
+</code></pre><p>查看分支合并图：</p>
+<pre><code>git <span class="command">log</span> <span class="comment">--graph</span>
+</code></pre><p>保存当前的工作现场：</p>
+<pre><code><span class="title">git</span> stash
+</code></pre><p>恢复保存的工作现场到工作区：</p>
+<pre><code><span class="title">git</span> stash apply
+</code></pre><p>删除保存的工作现场：</p>
+<pre><code><span class="title">git</span> stash drop
+</code></pre><p>恢复工作现场到工作区，并删除保存的现场：</p>
+<pre><code>git stash <span class="keyword">pop</span>
+</code></pre><p>强行删除某个分支：</p>
+<pre><code>git brach -D &lt;<span class="property">name</span>&gt; 
+</code></pre><p>查看远程库信息：</p>
+<pre><code><span class="title">git</span> remote
+</code></pre><p>查看远程库详细信息：</p>
+<pre><code><span class="title">git</span> remote -v
+</code></pre><p>推送分支：</p>
+<pre><code><span class="label">git</span> <span class="keyword">push </span>origin &lt;<span class="keyword">branch_name&gt;</span>
+</code></pre><p>抓取远程新提交：</p>
+<pre><code><span class="title">git</span> pull
+</code></pre><p>在本地创建和远程分支对应的分支：</p>
+<pre><code><span class="label">git</span> checkout -<span class="keyword">b </span><span class="keyword">branch_name </span>origin/<span class="keyword">branch_name</span>
+</code></pre><p>简历本地分支和远程分支的关联：</p>
+<pre><code><span class="label">git</span> <span class="keyword">branch </span>--set-upstream <span class="keyword">branch_name </span>origin/<span class="keyword">branch_name</span>
+</code></pre><p>打标签：</p>
+<pre><code>git <span class="built_in">tag</span> <span class="subst">&lt;</span><span class="keyword">tag_name</span><span class="subst">&gt;</span>
+</code></pre><p>查看所有标签：</p>
+<pre><code>git <span class="built_in">tag</span>
+</code></pre><p>对某个版本打标签：</p>
+<pre><code>git <span class="built_in">tag</span> <span class="subst">&lt;</span><span class="keyword">tag_name</span><span class="subst">&gt;</span> commit_id
+</code></pre><p>查看标签信息：</p>
+<pre><code>git show <span class="tag">&lt;<span class="title">tag_name</span>&gt;</span>
+</code></pre><p>创建带有说明的标签：</p>
+<pre><code>git <span class="built_in">tag</span> <span class="attribute">-a</span> <span class="subst">&lt;</span><span class="keyword">tag_name</span><span class="subst">&gt;</span> <span class="attribute">-m</span> <span class="string">"tag_desprition"</span> commit_id
+</code></pre><p>用私钥签名打一个标签</p>
+<pre><code>git <span class="built_in">tag</span> <span class="attribute">-a</span> <span class="subst">&lt;</span><span class="keyword">tag_name</span><span class="subst">&gt;</span> <span class="attribute">-m</span> <span class="string">"tag_desprition"</span> commit_id
+</code></pre><p>删除标签：</p>
+<pre><code>git <span class="built_in">tag</span> <span class="attribute">-d</span> <span class="subst">&lt;</span><span class="keyword">tag_name</span><span class="subst">&gt;</span>
+</code></pre><p>推送某个标签到远程</p>
+<pre><code><span class="label">git</span> <span class="keyword">push </span>origin &lt;tag_name&gt;
+</code></pre><p>一次性推送全部尚未推送到远程的本地标签：</p>
+<pre><code>git push origin <span class="comment">--tags</span>
+</code></pre><p>从远程库删除标签：</p>
+<pre><code>git push origin <span class="symbol">:refs/tags/&lt;tag_name&gt;</span>
+</code></pre>
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2015/07/13/hexo独立博客的搭建、部署和个性化/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">hexo独立博客的搭建、部署和个性化</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=2045702" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="2015/07/13/Git常用命令使用说明/" data-title="Git常用命令使用说明" data-url="http://yoursite.com/2015/07/13/Git常用命令使用说明/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"diaoblog"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2015 H×P
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>
