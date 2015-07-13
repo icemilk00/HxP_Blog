@@ -210,7 +210,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>为了复习并记录下常用的Git命令</p>
-<p>从来没有接触过git的同学可以参考这个:<br>1.<a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="external">我学Git就是参考的这个</a><br>2.<a href="http://git-scm.com/book/zh/v1" target="_blank" rel="external">官方文档</a></p>
+<p>从来没有接触过git的同学可以参考这个:<br>1.<a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000">我学Git就是参考的这个</a><br>2.<a href="http://git-scm.com/book/zh/v1">官方文档</a></p>
 <hr>
 <p>初始化一个Git仓库：</p>
 <pre><code><span class="title">git</span> init
@@ -220,97 +220,6 @@
 git commit
 </code></pre><p>查看工作区的Git状态：</p>
 <pre><code>git <span class="keyword">status</span>
-</code></pre><p>查看修改：</p>
-<pre><code><span class="title">git</span> diff
-</code></pre><p>查看提交历史：</p>
-<pre><code>git <span class="command">log</span>
-</code></pre><p>查看命令历史：</p>
-<pre><code><span class="title">git</span> reflog
-</code></pre><p>回滚到某个版本：</p>
-<pre><code>git <span class="operator"><span class="keyword">reset</span> <span class="comment">--hard commit_id</span></span>
-</code></pre><blockquote>
-<p>commit_id 可以通过查看提交历史，来获取想要回滚的版本id</p>
-</blockquote>
-<p>丢弃工作区的修改：</p>
-<pre><code>git checkout <span class="comment">-- file</span>
-</code></pre><blockquote>
-<p>会同步到最近一次 git add 的内容</p>
-</blockquote>
-<p>丢弃暂存区内容：</p>
-<pre><code>git reset HEAD <span class="type">file</span>
-</code></pre><blockquote>
-<p>会把最近一次 git add 的内容干掉，然后再执行上面的 git checkout — file，可以把工作区和暂存区同步</p>
-</blockquote>
-<p>丢弃版本库的内容：</p>
-<blockquote>
-<p>请参考上面的 回滚到某个版本 的内容。</p>
-</blockquote>
-<p>删除版本库某个文件：</p>
-<pre><code><span class="title">git</span> rm
-</code></pre><p>关联一个远程库：</p>
-<pre><code>git remote add origin git@server-<span class="property">name</span>:path/repo-<span class="property">name</span>.git
-</code></pre><p>第一次推送master分支所有内容：</p>
-<pre><code><span class="label">git</span> <span class="keyword">push </span>-u origin master
-</code></pre><p>之后的修改推送：</p>
-<pre><code><span class="label">git</span> <span class="keyword">push </span>origin master 
-</code></pre><p>从远程库克隆一个本地库：</p>
-<pre><code>git clone git@server-<span class="property">name</span>:path/repo-<span class="property">name</span>.git
-</code></pre><p>查看分支：</p>
-<pre><code><span class="title">git</span> branch
-</code></pre><p>创建分支：</p>
-<pre><code>git branch &lt;<span class="property">name</span>&gt;
-</code></pre><p>切换分支：</p>
-<pre><code>git checkout &lt;<span class="property">name</span>&gt;
-</code></pre><p>创建 + 切换分支：</p>
-<pre><code>git checkout -吧 &lt;<span class="property">name</span>&gt;
-</code></pre><p>合并某分支到当前分支：</p>
-<pre><code>git <span class="built_in">merge</span> &lt;<span class="keyword">name</span>&gt;
-</code></pre><p>删除分支：</p>
-<pre><code>git branch -d &lt;<span class="property">name</span>&gt;
-</code></pre><p>查看分支合并图：</p>
-<pre><code>git <span class="command">log</span> <span class="comment">--graph</span>
-</code></pre><p>保存当前的工作现场：</p>
-<pre><code><span class="title">git</span> stash
-</code></pre><p>恢复保存的工作现场到工作区：</p>
-<pre><code><span class="title">git</span> stash apply
-</code></pre><p>删除保存的工作现场：</p>
-<pre><code><span class="title">git</span> stash drop
-</code></pre><p>恢复工作现场到工作区，并删除保存的现场：</p>
-<pre><code>git stash <span class="keyword">pop</span>
-</code></pre><p>强行删除某个分支：</p>
-<pre><code>git brach -D &lt;<span class="property">name</span>&gt; 
-</code></pre><p>查看远程库信息：</p>
-<pre><code><span class="title">git</span> remote
-</code></pre><p>查看远程库详细信息：</p>
-<pre><code><span class="title">git</span> remote -v
-</code></pre><p>推送分支：</p>
-<pre><code><span class="label">git</span> <span class="keyword">push </span>origin &lt;<span class="keyword">branch_name&gt;</span>
-</code></pre><p>抓取远程新提交：</p>
-<pre><code><span class="title">git</span> pull
-</code></pre><p>在本地创建和远程分支对应的分支：</p>
-<pre><code><span class="label">git</span> checkout -<span class="keyword">b </span><span class="keyword">branch_name </span>origin/<span class="keyword">branch_name</span>
-</code></pre><p>简历本地分支和远程分支的关联：</p>
-<pre><code><span class="label">git</span> <span class="keyword">branch </span>--set-upstream <span class="keyword">branch_name </span>origin/<span class="keyword">branch_name</span>
-</code></pre><p>打标签：</p>
-<pre><code>git <span class="built_in">tag</span> <span class="subst">&lt;</span><span class="keyword">tag_name</span><span class="subst">&gt;</span>
-</code></pre><p>查看所有标签：</p>
-<pre><code>git <span class="built_in">tag</span>
-</code></pre><p>对某个版本打标签：</p>
-<pre><code>git <span class="built_in">tag</span> <span class="subst">&lt;</span><span class="keyword">tag_name</span><span class="subst">&gt;</span> commit_id
-</code></pre><p>查看标签信息：</p>
-<pre><code>git show <span class="tag">&lt;<span class="title">tag_name</span>&gt;</span>
-</code></pre><p>创建带有说明的标签：</p>
-<pre><code>git <span class="built_in">tag</span> <span class="attribute">-a</span> <span class="subst">&lt;</span><span class="keyword">tag_name</span><span class="subst">&gt;</span> <span class="attribute">-m</span> <span class="string">"tag_desprition"</span> commit_id
-</code></pre><p>用私钥签名打一个标签</p>
-<pre><code>git <span class="built_in">tag</span> <span class="attribute">-a</span> <span class="subst">&lt;</span><span class="keyword">tag_name</span><span class="subst">&gt;</span> <span class="attribute">-m</span> <span class="string">"tag_desprition"</span> commit_id
-</code></pre><p>删除标签：</p>
-<pre><code>git <span class="built_in">tag</span> <span class="attribute">-d</span> <span class="subst">&lt;</span><span class="keyword">tag_name</span><span class="subst">&gt;</span>
-</code></pre><p>推送某个标签到远程</p>
-<pre><code><span class="label">git</span> <span class="keyword">push </span>origin &lt;tag_name&gt;
-</code></pre><p>一次性推送全部尚未推送到远程的本地标签：</p>
-<pre><code>git push origin <span class="comment">--tags</span>
-</code></pre><p>从远程库删除标签：</p>
-<pre><code>git push origin <span class="symbol">:refs/tags/&lt;tag_name&gt;</span>
 </code></pre>
       
     </div>
@@ -320,6 +229,10 @@ git commit
       
       
 
+      
+        <p class="article-more-link">
+          <a  href="/2015/07/13/Git常用命令使用说明/#more">more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
@@ -363,54 +276,9 @@ git commit
       
         <p>身为一只混迹在高逼格IT圈的程序员，一个个性化的博客还是必须的。因为需要不断的学习和积累，之前用的csdn的博客，后来想搭建一个属于自己的博客，机缘巧合正好看到hexo，就怼了进来，粗看了下觉得还不错，就找教程搭了一下，最后发现还算简单易用，所以稍微记录一下。</p>
 <p>这个博客也是为自己积累一些东西用，并且提示自己不断学习，且不要浮躁。</p>
-<h2 id="1-_Hexo介绍">1. Hexo介绍</h2><p>hexo是出自一个台湾同胞<a href="http://twitter.com/tommy351" target="_blank" rel="external">tommy351</a>之手，是一个静态Node.js的博客程序，我们可以把hexo生成的网页放到Github之类的平台上，也可以放到我们自己的服务器上，反正你高兴就好。</p>
+<h2 id="1-_Hexo介绍">1. Hexo介绍</h2><p>hexo是出自一个台湾同胞<a href="http://twitter.com/tommy351">tommy351</a>之手，是一个静态Node.js的博客程序，我们可以把hexo生成的网页放到Github之类的平台上，也可以放到我们自己的服务器上，反正你高兴就好。</p>
 <h2 id="2-_环境部署">2. 环境部署</h2><p>我们这里主要用一些主流的部署，就是Hexo生成的blog，部署到GitHub Pages上, 然后域名绑定，再然后设置主题，网站统计用百度统计，评论用多说评论，分享用jiaThis，之后再有什么加的，我在补充。</p>
-<h2 id="3-_环境准备">3. 环境准备</h2><p><strong>安装Node</strong><br>Node.js的博客，当然要先装Node,到Node官方网站，下载<a href="https://nodejs.org/download/" target="_blank" rel="external">最新版本</a>,然后无脑安装。</p>
-<hr>
-<p><strong>安装Git</strong><br>应该大多数猿类都有Git吧，我就默认你有了，没有的话，<a href="http://git-scm.com/book/zh/v1" target="_blank" rel="external">Git官方文档</a>，进去左边可以调语言，配好Git。</p>
-<hr>
-<p><strong>安装Sublime</strong><br>其实任意一款你熟悉且喜欢的文本编辑工具就行，我这里用Sublime，因为我电脑上正好有这玩意，并且它正好支持MarkDown，而已。下载就自行度娘吧，我的貌似还是没破解版。</p>
-<hr>
-<p><strong>GitHub</strong><br>这也应该是程序猿标配吧，所以这里我也不多细说，没有的话，去<a href="https://github.com/" target="_blank" rel="external">GitHub</a>注册个号，然后做一下配置。主要是ssh的配置和global配置，很容易。<br>看这两个东西：<br><a href="https://help.github.com/articles/generating-ssh-keys/" target="_blank" rel="external">配置SSH-Keys</a>，<br><a href="https://help.github.com/articles/error-permission-denied-publickey/" target="_blank" rel="external">配置SSH出现Error: Permission denied解决办法</a></p>
-<h2 id="4-_本地配置Hexo">4. 本地配置Hexo</h2><p><strong>安装hexo</strong><br>安装好Node.js和Git后就可以开始搞hexo了，先安装：</p>
-<pre><code>npm <span class="keyword">install</span> -g hexo
-</code></pre><p><strong>初始化hexo</strong><br>cd到你想放blog的目录，执行：</p>
-<pre><code><span class="title">hexo</span> init
-</code></pre><p><strong>生成静态页面</strong><br>cd到你的blog目录，执行：</p>
-<pre><code>hexo <span class="keyword">ge</span><span class="label">nerate</span>
-</code></pre><p>然后会发现你的hexo/public/ 目录下多了一堆文件夹。</p>
-<p><strong>本地预览</strong><br>如果上面一切顺利，那么你在命令行输入：</p>
-<pre><code>hexo <span class="keyword">server</span>
-</code></pre><p>然后去浏览器访问 <a href="http://127.0.0.1:4000" target="_blank" rel="external">127.0.0.1:4000</a>就可以看到你的hexo博客的样子了，并且你在做一些配置或者别的修改时，只要刷一下网页，就可以实施看到你后台做的变动在前端的显示了。</p>
-<h2 id="5-_部署Hexo到你的GitHub">5. 部署Hexo到你的GitHub</h2><p>现在你的博客已经初步成型，是不是灰常简单，那么我们现在要把它发布到网上，这里我们选择使用GitHub免费提供的GitHub Pages。</p>
-<p><strong>新建仓库</strong><br><img src="http://7xkd38.com1.z0.glb.clouddn.com/1.png?attname=&amp;e=1436878628&amp;token=a4gj_377l4Cch6nSwwweaRDYYPtW5C5lX9BsN-TU:ExvZOjen4sLGZmKQqHkAyqItuNc" alt="新建仓库1"></p>
-<p><img src="http://7xkd38.com1.z0.glb.clouddn.com/2.png?attname=&amp;e=1436878628&amp;token=a4gj_377l4Cch6nSwwweaRDYYPtW5C5lX9BsN-TU:9CREqWCYP_ah_rtqu8yLtVg6qak" alt="新建仓库2"></p>
-<p>点击Create repository，这样你即将存放hexo博客代码的仓库就创建好了。</p>
-<p><strong>配置</strong><br>找到你hexo博客目录下的全局配置文件：_config.yml, 用编辑工具（或vim）打开，找到最下边deploy部分，设置GitHub地址。</p>
-<pre><code><span class="attribute">deploy</span>:
-  <span class="attribute">type</span>: git
-  <span class="attribute">repo</span>: <span class="attribute">https</span>:<span class="comment">//github.com/your_GitHub_account/your_blog_name.git</span>
-  <span class="attribute">branch</span>: gh-pages
-</code></pre><p>上面的repo就是你刚才新建的仓库的地址,譬如我的就是：<a href="https://github.com/icemilk00/hxp_blog.git" target="_blank" rel="external">https://github.com/icemilk00/hxp_blog.git</a>，分支填写gh-pages分支，这个分支下，GitHub会自动给你生成可访问的站点。</p>
-<blockquote>
-<p>这里注意，标签冒号后边一定要加一个空格，否则都不生效。</p>
-</blockquote>
-<p><strong>上传</strong><br>然后直接执行命令：</p>
-<pre><code><span class="title">hexo</span> deploy
-</code></pre><p>出现deploy的打印信息，就说明正在上传。不出意外会上传成功。</p>
-<blockquote>
-<p>如果你发现你执行了这条命令后，没有错误提示也没有成功提示，即无任何终端输出的话，请回_config.yml里查看刚才的deploy配置是不是没有在标签冒号后加空格。</p>
-</blockquote>
-<p>上传成功后，打开你的GitHub，就会看到如下的图,然后选择gh-pages分支:</p>
-<p><img src="http://7xkd38.com1.z0.glb.clouddn.com/3.png?attname=&amp;e=1436878628&amp;token=a4gj_377l4Cch6nSwwweaRDYYPtW5C5lX9BsN-TU:kSqkdYpRb-VgPn2iukinW_9sSfs" alt="站点仓库1"></p>
-<p>你可以看到hexo博客文件，然后找到右侧setting选项，并点进去：</p>
-<p><img src="http://7xkd38.com1.z0.glb.clouddn.com/4.png?attname=&amp;e=1436878628&amp;token=a4gj_377l4Cch6nSwwweaRDYYPtW5C5lX9BsN-TU:uFNzAVyuQcOF2qaXyLdiclpxfoM" alt="站点仓库2"></p>
-<p>你就可以在GitHub Pages 里看到你hexo博客的地址了：</p>
-<p><img src="http://7xkd38.com1.z0.glb.clouddn.com/5.png?attname=&amp;e=1436878628&amp;token=a4gj_377l4Cch6nSwwweaRDYYPtW5C5lX9BsN-TU:bY-oYaazAd7_I_ck0twOOUJIwbw" alt="站点仓库3"></p>
-<p>我这里是绑过域名后的，你们看到的和我这个应该不一样，不过你点击访问，就可以访问到你的博客了。<br>这样，属于你自己的博客就算正式发布上线了，接着我们要去绑定一个域名。</p>
-<hr>
-<p>待续…明天继续…</p>
-
+<h2 id="3-_环境准备">3. 环境准备</h2><p><strong>安装Node</strong><br>Node.js的博客，当然要先装Node,到Node官方网站，下载<a href="https://nodejs.org/download/">最新版本</a>,然后无脑安装。</p>
       
     </div>
     
@@ -423,6 +291,10 @@ git commit
 
       
 
+      
+        <p class="article-more-link">
+          <a  href="/2015/07/13/hexo独立博客的搭建、部署和个性化/#more">more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
@@ -475,181 +347,6 @@ __毫无疑问__
 _最好吃的_
 </code></pre><p><strong>一个人来到田纳西</strong></p>
 <p><strong>毫无疑问</strong><br><em>我做的馅饼<br>是全天下</em><br><em>最好吃的</em></p>
-<h1 id="分割线">分割线</h1><hr>
-<pre><code><span class="header">三个或更多的-_*，必须单独一行，可含空格
----</span>
-</code></pre><h1 id="引用">引用</h1><hr>
-<pre><code>&gt;引用
-</code></pre><blockquote>
-<p>引用</p>
-</blockquote>
-<pre><code>内层符号前的空格必须要
-
-&gt;引用
- <span class="prompt">&gt;&gt;</span>引用中的引用
-</code></pre><blockquote>
-<p>引用</p>
-<blockquote>
-<p>引用中的引用</p>
-</blockquote>
-</blockquote>
-<h1 id="标题:Setext方式">标题:Setext方式</h1><hr>
-<pre><code>三个或更多
-
-<span class="header">大标题
-===</span>
-<span class="header">小标题
----</span>
-</code></pre><h1 id="大标题">大标题</h1><h2 id="小标题">小标题</h2><h1 id="标题:Atx方式">标题:Atx方式</h1><hr>
-<pre><code><span class="preprocessor">#一级标题</span>
-<span class="preprocessor">##二级标题</span>
-<span class="preprocessor">###三级标题</span>
-<span class="preprocessor">####四级标题</span>
-<span class="preprocessor">#####五级标题</span>
-<span class="preprocessor">######六级标题</span>
-</code></pre><h1 id="一级标题">一级标题</h1><h2 id="二级标题">二级标题</h2><h3 id="三级标题">三级标题</h3><h4 id="四级标题">四级标题</h4><h5 id="五级标题">五级标题</h5><h6 id="六级标题">六级标题</h6><h1 id="无序列表">无序列表</h1><hr>
-<pre><code>符号之后的空格不能少，-+*效果一样，但不能混合使用，因混合使用是嵌套列表，内容可超长
--<span class="ruby"> 无序列表<span class="number">1</span>
-</span>-<span class="ruby"> 无序列表<span class="number">2</span>
-</span>-<span class="ruby"> 无序列表<span class="number">3</span>
-</span>-<span class="ruby"> 无序列表<span class="number">4</span><span class="symbol">:</span>长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长</span>
-</code></pre><ul>
-<li>无序列表1</li>
-<li>无序列表2</li>
-<li>无序列表3</li>
-<li>无序列表4:长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长</li>
-</ul>
-<pre><code>符号之后的空格不能少，-+*效果一样，但不能混合使用，因混合使用是嵌套列表，内容可超长
-<span class="bullet">+ </span>无序列表1
-<span class="bullet">+ </span>无序列表2
-<span class="bullet">+ </span>无序列表3
-<span class="bullet">+ </span>无序列表4:长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长
-</code></pre><ul>
-<li>无序列表1</li>
-<li>无序列表2</li>
-<li>无序列表3</li>
-<li>无序列表4:长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长</li>
-</ul>
-<pre><code>符号之后的空格不能少，-+<span class="keyword">*</span>效果一样，但不能混合使用，因混合使用是嵌套列表，内容可超长
-<span class="keyword">*</span> 无序列表1
-<span class="keyword">*</span> 无序列表2
-<span class="keyword">*</span> 无序列表3
-<span class="keyword">*</span> 无序列表4:长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长
-</code></pre><ul>
-<li>无序列表1</li>
-<li>无序列表2</li>
-<li>无序列表3</li>
-<li>无序列表4:长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长</li>
-</ul>
-<h1 id="有序列表">有序列表</h1><hr>
-<pre><code>数字不能省略但可无序，点号之后的空格不能少
-<span class="bullet">1. </span>有序列表
-<span class="bullet">2. </span>有序列表
-<span class="bullet">3. </span>有序列表
-</code></pre><ol>
-<li>有序列表</li>
-<li>有序列表</li>
-<li>有序列表</li>
-</ol>
-<pre><code>数字无序，但实际效果有序
-<span class="bullet">1. </span>有序列表
-<span class="bullet">3. </span>有序列表
-<span class="bullet">1. </span>有序列表
-</code></pre><ol>
-<li>有序列表</li>
-<li>有序列表</li>
-<li>有序列表</li>
-</ol>
-<h1 id="嵌套列表">嵌套列表</h1><hr>
-<pre><code>-<span class="ruby">+*可循环使用，但符号之后的空格不能少，符号之前的空格也不能少
-</span>-<span class="ruby"> 嵌套列表
-</span> + 嵌套列表
- + 嵌套列表
-  -<span class="ruby"> 嵌套列表
-</span>   * 嵌套列表
--<span class="ruby"> 嵌套列表</span>
-</code></pre><ul>
-<li>嵌套列表<ul>
-<li>嵌套列表</li>
-<li>嵌套列表</li>
-</ul>
-<ul>
-<li>嵌套列表<ul>
-<li>嵌套列表</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>嵌套列表</li>
-</ul>
-<h1 id="文字超链接">文字超链接</h1><hr>
-<pre><code>Tooltips可省略
-[<span class="link_label">HxP</span>](<span class="link_url">http://diaoblog.com "HxP的博客"</span>)
-</code></pre><p><a href="http://diaoblog.com" title="HxP的博客" target="_blank" rel="external">HxP</a></p>
-<h1 id="图片链接">图片链接</h1><hr>
-<pre><code>多个感叹号，Tooltips可省略，要设置大小只能借助HTML标记
-![<span class="link_label">GitHub Mark</span>](<span class="link_url">http://github.global.ssl.fastly.net/images/modules/logos_page/GitHub-Mark.png "GitHub Mark"</span>)
-</code></pre><p><img src="http://github.global.ssl.fastly.net/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Mark" title="GitHub Mark"></p>
-<h1 id="索引超链:Reference方式">索引超链:Reference方式</h1><hr>
-<pre><code>索引，1 2可以是任意字符
-[<span class="link_label">HxP</span>][<span class="link_reference">1</span>]
-![<span class="link_label">GitHub Octocat</span>][<span class="link_reference">2</span>]
-
-[<span class="link_reference">1</span>]:<span class="link_url">http://diaoblog.com</span>
-[<span class="link_reference">2</span>]:<span class="link_url">http://github.global.ssl.fastly.net/images/modules/logos_page/Octocat.png</span>
-</code></pre><p><a href="http://diaoblog.com" target="_blank" rel="external">HxP</a><br><img src="http://github.global.ssl.fastly.net/images/modules/logos_page/Octocat.png" alt="GitHub Octocat"></p>
-<h1 id="自动链接">自动链接</h1><hr>
-<pre><code>尖括号
-&lt;<span class="string">http:</span><span class="comment">//diaoblog.com&gt;</span>
-</code></pre><p><a href="http://diaoblog.com" target="_blank" rel="external">http://diaoblog.com</a></p>
-<h1 id="代码:行内代码">代码:行内代码</h1><hr>
-<pre><code>在第一行后指定编程语言，也可以不指定，就是注释
-<span class="comment">&lt;!--0--&gt;</span>
-</code></pre><hr>
-<pre><code>val s = <span class="string">"hello Markdown"</span>
-<span class="function"><span class="title">println</span><span class="params">( s )</span></span>
-</code></pre><h1 id="代码:段落代码">代码:段落代码</h1><hr>
-<pre><code>每行文字前加四个空格或一个Tab
-
-val s = <span class="string">"hello Markdown"</span>
-<span class="function"><span class="title">println</span><span class="params">( s )</span></span>
-</code></pre><hr>
-<pre><code>val s = <span class="string">"hello Markdown"</span>
-<span class="function"><span class="title">println</span><span class="params">( s )</span></span>
-</code></pre><h1 id="注释">注释</h1><pre><code>用html的注释，好像只有这样？
-<span class="comment">&lt;!-- 注释 --&gt;</span>
-</code></pre><h1 id="转义字符">转义字符</h1><pre><code> 用html的注释，好像只有这样？
-Markdown中的转义字符为<span class="command">\，</span>转义的有：
-<span class="command">\\</span> 反斜杠
-<span class="command">\`</span> 反引号
-<span class="command">\*</span> 星号
-<span class="command">\_</span> 下划线
-<span class="command">\{</span><span class="command">\}</span> 大括号
-<span class="command">\[</span><span class="command">\]</span> 中括号
-<span class="command">\(</span><span class="command">\)</span> 小括号
-<span class="command">\#</span> 井号
-<span class="command">\+</span> 加号
-<span class="command">\-</span> 减号
-<span class="command">\.</span> 英文句号
-<span class="command">\!</span> 感叹号
-</code></pre><h1 id="其他">其他</h1><hr>
-<pre><code>文本中可以直接用heml标签，但是要前后加上空行
-</code></pre><h1 id="one_more_thing:表格">one more thing:表格</h1><hr>
-<pre><code>Markdown的扩展语法，hexo不支持
-||<span class="string"> *Year* </span>||<span class="string"> *Temperature (low)* </span>||<span class="string"> *Temperature (high)* </span>||
-||<span class="string"> 1900 </span>||<span class="string"> -10 </span>||<span class="string"> 25 </span>||
-||<span class="string"> 1910 </span>||<span class="string"> -15 </span>||<span class="string"> 30 </span>||
-||<span class="string"> 1920 </span>||<span class="string"> -10 </span>||<span class="string"> 32 </span>||
-</code></pre><h1 id="结束语">结束语</h1><hr>
-<p>以上掌握的话，hexo blog更新基本够用，更详尽的请<a href="http://wowubuntu.com/markdown/" target="_blank" rel="external">参考文献10</a>，另外Markdown+R可以干大事，请<a href="http://www.jianshu.com/p/PpDNMG" target="_blank" rel="external">参考文献7</a>。</p>
-<h1 id="参考">参考</h1><ol>
-<li><a href="http://ibruce.info/2013/11/26/markdown/" target="_blank" rel="external">markdown简明语法</a> <em>(PS:我这篇基本就是照这个边抄边练习过来的)</em></li>
-<li><a href="http://lutaf.com/markdown-simple-usage.htm" target="_blank" rel="external">markdown 简明语法</a></li>
-</ol>
-<h1 id="后话">后话</h1><hr>
-<p>接下来会把搭建bolg的过程跟新上来，因为要学markDown语法，所以理所当然的这篇成了这个blog的处女跟。之后blog如果有幸能在我不懒的时候更新的更完善且个性化，我也会把过程记录下来。</p>
-<p>还有，开这个blog主要是为了让自己不那么浮躁。</p>
-
       
     </div>
     
@@ -662,6 +359,10 @@ Markdown中的转义字符为<span class="command">\，</span>转义的有：
 
       
 
+      
+        <p class="article-more-link">
+          <a  href="/2015/07/11/MarkDown-的简明语法/#more">more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
