@@ -15,12 +15,12 @@
 <meta property="og:description" content="身为一只混迹在高逼格IT圈的程序员，一个个性化的博客还是必须的。因为需要不断的学习和积累，之前用的csdn的博客，后来想搭建一个属于自己的博客，机缘巧合正好看到hexo，就怼了进来，粗看了下觉得还不错，就找教程搭了一下，最后发现还算简单易用，所以稍微记录一下。
 这个博客也是为自己积累一些东西用，并且提示自己不断学习，且不要浮躁。大部分都是参考的这篇文章
 1. Hexo介绍hexo是出自一个台湾同胞">
-<meta property="og:image" content="http://7xkd38.com1.z0.glb.clouddn.com/1.png?attname=&e=1436878628&token=a4gj_377l4Cch6nSwwweaRDYYPtW5C5lX9BsN-TU:ExvZOjen4sLGZmKQqHkAyqItuNc">
-<meta property="og:image" content="http://7xkd38.com1.z0.glb.clouddn.com/2.png?attname=&e=1436878628&token=a4gj_377l4Cch6nSwwweaRDYYPtW5C5lX9BsN-TU:9CREqWCYP_ah_rtqu8yLtVg6qak">
-<meta property="og:image" content="http://7xkd38.com1.z0.glb.clouddn.com/3.png?attname=&e=1436878628&token=a4gj_377l4Cch6nSwwweaRDYYPtW5C5lX9BsN-TU:kSqkdYpRb-VgPn2iukinW_9sSfs">
-<meta property="og:image" content="http://7xkd38.com1.z0.glb.clouddn.com/4.png?attname=&e=1436878628&token=a4gj_377l4Cch6nSwwweaRDYYPtW5C5lX9BsN-TU:uFNzAVyuQcOF2qaXyLdiclpxfoM">
-<meta property="og:image" content="http://7xkd38.com1.z0.glb.clouddn.com/5.png?attname=&e=1436878628&token=a4gj_377l4Cch6nSwwweaRDYYPtW5C5lX9BsN-TU:bY-oYaazAd7_I_ck0twOOUJIwbw">
-<meta property="og:updated_time" content="2015-12-13T09:08:40.000Z">
+<meta property="og:image" content="http://7xkd38.com1.z0.glb.clouddn.com/1.png">
+<meta property="og:image" content="http://7xkd38.com1.z0.glb.clouddn.com/2.png">
+<meta property="og:image" content="http://7xkd38.com1.z0.glb.clouddn.com/3.png">
+<meta property="og:image" content="http://7xkd38.com1.z0.glb.clouddn.com/4.png">
+<meta property="og:image" content="http://7xkd38.com1.z0.glb.clouddn.com/5.png">
+<meta property="og:updated_time" content="2016-01-06T15:28:13.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo独立博客的搭建、部署和个性化">
 <meta name="twitter:description" content="身为一只混迹在高逼格IT圈的程序员，一个个性化的博客还是必须的。因为需要不断的学习和积累，之前用的csdn的博客，后来想搭建一个属于自己的博客，机缘巧合正好看到hexo，就怼了进来，粗看了下觉得还不错，就找教程搭了一下，最后发现还算简单易用，所以稍微记录一下。
@@ -253,8 +253,8 @@
 <pre><code>hexo <span class="keyword">server</span>
 </code></pre><p>然后去浏览器访问 <a href="http://127.0.0.1:4000" target="_blank" rel="external">127.0.0.1:4000</a>就可以看到你的hexo博客的样子了，并且你在做一些配置或者别的修改时，只要刷一下网页，就可以实施看到你后台做的变动在前端的显示了。</p>
 <h2 id="5-_部署Hexo到你的GitHub">5. 部署Hexo到你的GitHub</h2><p>现在你的博客已经初步成型，是不是灰常简单，那么我们现在要把它发布到网上，这里我们选择使用GitHub免费提供的GitHub Pages。</p>
-<p><strong>新建仓库</strong><br><img src="http://7xkd38.com1.z0.glb.clouddn.com/1.png?attname=&amp;e=1436878628&amp;token=a4gj_377l4Cch6nSwwweaRDYYPtW5C5lX9BsN-TU:ExvZOjen4sLGZmKQqHkAyqItuNc" alt="新建仓库1"></p>
-<p><img src="http://7xkd38.com1.z0.glb.clouddn.com/2.png?attname=&amp;e=1436878628&amp;token=a4gj_377l4Cch6nSwwweaRDYYPtW5C5lX9BsN-TU:9CREqWCYP_ah_rtqu8yLtVg6qak" alt="新建仓库2"></p>
+<p><strong>新建仓库</strong><br><img src="http://7xkd38.com1.z0.glb.clouddn.com/1.png" alt="新建仓库1"></p>
+<p><img src="http://7xkd38.com1.z0.glb.clouddn.com/2.png" alt="新建仓库2"></p>
 <p>点击Create repository，这样你即将存放hexo博客代码的仓库就创建好了。</p>
 <p><strong>配置</strong><br>找到你hexo博客目录下的全局配置文件：_config.yml, 用编辑工具（或vim）打开，找到最下边deploy部分，设置GitHub地址。</p>
 <pre><code><span class="attribute">deploy</span>:
@@ -272,14 +272,37 @@
 <p>如果你发现你执行了这条命令后，没有错误提示也没有成功提示，即无任何终端输出的话，请回_config.yml里查看刚才的deploy配置是不是没有在标签冒号后加空格。</p>
 </blockquote>
 <p>上传成功后，打开你的GitHub，就会看到如下的图,然后选择gh-pages分支:</p>
-<p><img src="http://7xkd38.com1.z0.glb.clouddn.com/3.png?attname=&amp;e=1436878628&amp;token=a4gj_377l4Cch6nSwwweaRDYYPtW5C5lX9BsN-TU:kSqkdYpRb-VgPn2iukinW_9sSfs" alt="站点仓库1"></p>
+<p><img src="http://7xkd38.com1.z0.glb.clouddn.com/3.png" alt="站点仓库1"></p>
 <p>你可以看到hexo博客文件，然后找到右侧setting选项，并点进去：</p>
-<p><img src="http://7xkd38.com1.z0.glb.clouddn.com/4.png?attname=&amp;e=1436878628&amp;token=a4gj_377l4Cch6nSwwweaRDYYPtW5C5lX9BsN-TU:uFNzAVyuQcOF2qaXyLdiclpxfoM" alt="站点仓库2"></p>
+<p><img src="http://7xkd38.com1.z0.glb.clouddn.com/4.png" alt="站点仓库2"></p>
 <p>你就可以在GitHub Pages 里看到你hexo博客的地址了：</p>
-<p><img src="http://7xkd38.com1.z0.glb.clouddn.com/5.png?attname=&amp;e=1436878628&amp;token=a4gj_377l4Cch6nSwwweaRDYYPtW5C5lX9BsN-TU:bY-oYaazAd7_I_ck0twOOUJIwbw" alt="站点仓库3"></p>
+<p><img src="http://7xkd38.com1.z0.glb.clouddn.com/5.png" alt="站点仓库3"></p>
 <p>我这里是绑过域名后的，你们看到的和我这个应该不一样，不过你点击访问，就可以访问到你的博客了。<br>这样，属于你自己的博客就算正式发布上线了，接着我们要去绑定一个域名。</p>
+<h2 id="6-写文章">6.写文章</h2><p>有了博客，那么就开始我们的记录之路。<br>执行命令</p>
+<pre><code>hexo <span class="keyword">new</span> [layout] <span class="string">"文章名字"</span>
+</code></pre><p>就可以新建一篇文章了，其中layout是可选参数，默认值为post。有哪些layout呢，请到scaffolds目录下查看，这些文件名称就是layout名称。当然你可以添加自己的layout，方法就是添加一个文件即可，同时你也可以编辑现有的layout，比如post的layout默认是hexo\scaffolds\post.md</p>
+<pre><code><span class="attribute">title</span>: <span class="string">{ { title } }</span>
+<span class="attribute">date</span>: <span class="string">{ { date } }</span>
+<span class="attribute">tags:</span>
+</code></pre><hr>
+<p>请注意，大括号与大括号之间我多加了个空格，否则会被转义，不能正常显示。</p>
+<p>我想添加categories，以免每次手工输入，只需要修改这个文件添加一行，如下：</p>
+<pre><code><span class="attribute">title</span>: <span class="string">{ { title } }</span>
+<span class="attribute">date</span>: <span class="string">{ { date } }</span>
+<span class="attribute">categories</span>: <span class="string"></span>
+<span class="attribute">tags</span>: <span class="string"></span>
+</code></pre><hr>
+<p>postName是md文件的名字，同时也出现在你文章的URL中，postName如果包含空格，必须用”将其包围，postName可以为中文。</p>
+<p>注意，所有文件：后面都必须有个空格，不然会报错。</p>
+<p>看一下刚才生成的文件hexo\source_posts\postName.md，内容如下：</p>
+<pre><code><span class="label">title:</span> 文章名字 <span class="preprocessor">#文章页面上的显示名称，可以任意修改，不会出现在URL中</span>
+<span class="label">date:</span> <span class="number">2013</span>-<span class="number">12</span>-<span class="number">02</span> <span class="number">15</span>:<span class="number">30</span>:<span class="number">16</span> <span class="preprocessor">#文章生成时间，一般不改，当然也可以任意修改</span>
+<span class="label">categories:</span> <span class="preprocessor">#文章分类目录，可以为空，注意:后面有个空格</span>
+<span class="label">tags:</span> <span class="preprocessor">#文章标签，可空，多标签请用格式[tag1,tag2,tag3]，注意:后面有个空格</span>
+</code></pre><hr>
+<p>这里开始使用markdown格式输入你的正文。<br>接下来，你就可以用喜爱的编辑器尽情书写你的文章。关于markdown语法，可以参考我的文章<a href="http://diaoblog.com/2015/07/11/MarkDown-%E7%9A%84%E7%AE%80%E6%98%8E%E8%AF%AD%E6%B3%95/" target="_blank" rel="external">Markdown的简明语法</a>。</p>
 <hr>
-<p>待续…明天继续…</p>
+<p>参考:<br><a href="http://ibruce.info/2013/11/22/hexo-your-blog/" target="_blank" rel="external">hexo你的博客</a><br><a href="http://blog.fens.me/hexo-blog-github/" target="_blank" rel="external">Hexo在github上构建免费的Web应用</a><br>待续…明天继续…</p>
 
       
     </div>
@@ -355,7 +378,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2015 H×P
+    		&copy; 2016 H×P
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
